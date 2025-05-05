@@ -1,0 +1,82 @@
+/* Estilos padrão para telas maiores (ou o que você já tem) */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 110px);
+  grid-gap: 10px;
+  margin-top: 20px;
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+#message {
+  font-size: 1em;
+}
+
+/* Para telas menores (tablets e celulares) com largura máxima de 768 pixels */
+@media (max-width: 768px) {
+  .grid-container {
+      grid-template-columns: repeat(3, 80px); /* Menos colunas e cards menores */
+      grid-gap: 8px;
+      margin-top: 15px;
+  }
+
+  .card {
+      width: 80px;
+      height: 80px;
+  }
+
+  h1 {
+      font-size: 1.5em;
+  }
+
+  #message {
+      font-size: 0.9em;
+  }
+
+  .container {
+      padding: 20px; /* Menos padding no container */
+  }
+}
+
+/* Para telas ainda menores (celulares) com largura máxima de 480 pixels */
+@media (max-width: 480px) {
+  .grid-container {
+      grid-template-columns: repeat(2, 100px); /* Ainda menos colunas em retrato */
+      grid-gap: 10px;
+      margin-top: 10px;
+      justify-content: center; /* Centraliza o grid em telas pequenas */
+  }
+
+  .card {
+      width: 100px;
+      height: 100px;
+  }
+
+  h1 {
+      font-size: 1.2em;
+  }
+
+  #message {
+      font-size: 0.8em;
+  }
+}
+
+/* Ajustes para orientação paisagem em telas pequenas (opcional) */
+@media (max-width: 600px) and (orientation: landscape) {
+  .grid-container {
+      grid-template-columns: repeat(4, 60px); /* Mais colunas em paisagem */
+  }
+
+  .card {
+      width: 60px;
+      height: 60px;
+  }
+}
+
